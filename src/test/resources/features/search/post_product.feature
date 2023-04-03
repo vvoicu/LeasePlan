@@ -10,4 +10,17 @@ Feature: Search for the product
     When he calls endpoint "https://waarkoop-server.herokuapp.com/api/v1/search/demo/apple"
     Then he sees the results displayed for mango
     When he calls endpoint "https://waarkoop-server.herokuapp.com/api/v1/search/demo/car"
-    Then he doesn not see the results
+    Then he does not see the results
+
+
+  Scenario:
+    When he calls endpoint "https://waarkoop-server.herokuapp.com/api/v1/search/demo/orange"
+    Then he sees the results displayed for apple
+
+  Scenario:
+    When he calls endpoint "https://waarkoop-server.herokuapp.com/api/v1/search/demo/apple"
+    Then he sees the results displayed for mango
+
+  Scenario:
+    When he calls endpoint "https://waarkoop-server.herokuapp.com/api/v1/search/demo/car"
+    Then he does not see the results

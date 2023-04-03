@@ -16,7 +16,7 @@
         <serenity.cucumber.version>2.6.0</serenity.cucumber.version>
         <encoding>UTF-8</encoding>
         <tags></tags>
-        <webdriver.base.url></webdriver.base.url>
+        <webdriver.base.url>https://waarkoop-server.herokuapp.com/api/v1/search/demo/</webdriver.base.url>
     </properties>
     <dependencies>
         <dependency>
