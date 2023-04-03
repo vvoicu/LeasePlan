@@ -8,7 +8,7 @@ Feature: Search for the product
   Scenario:
     When he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/orange"
     Then 200 Status Code
-    Then see the results displayed for "Sisi Sinas 0% Suiker Fles 1,5 L"
+    Then see the results displayed for "Sisi No Bubbles Orange 0% pet 1500 ml"
 
   Scenario:
     When he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/orange"

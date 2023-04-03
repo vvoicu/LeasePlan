@@ -6,14 +6,13 @@ import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
-import org.junit.Assert;
-import starter.stepdefinitions.CarsAPI;
+import org.hamcrest.Matchers;
 
-import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
+import java.util.logging.Logger;
 
 public class WaarkoopSteps {
     private  Response response;
-
+    Logger logger = Logger.getLogger(getClass().getSimpleName());
     @Steps
     public ApiConnector apiConnector;
 
@@ -27,14 +26,14 @@ public class WaarkoopSteps {
 
     @Then("200 Status Code")
     public void then200StatusCode() {
-        restAssuredThat(response -> response.statusCode(200));
+        logger.info("Status Code 200");
+        SerenityRest.restAssuredThat(response -> response.statusCode(200));
     }
 
     @Then("see the results displayed for {string}")
     public void see_the_results_displayed_for(String expectedTerm) {
-        restAssuredThat(response -> response.body().contains(expectedTerm));
-//        Assert.assertTrue("Term Expected: " + expectedTerm + " -- Actual response: " + response.prettyPrint(), response.getBody().toString().contains(expectedTerm));
+
+        logger.info("Expected term: " + expectedTerm);
+        SerenityRest.restAssuredThat(response -> response.body("title", Matchers.contains(expectedTerm)));
     }
-
-
 }
