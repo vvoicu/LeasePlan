@@ -10,14 +10,14 @@ import java.util.logging.Logger;
 
 public class ApiConnector {
 
-
     Logger logger = Logger.getLogger(getClass().getSimpleName());
 
 
+    public Response getRequest(String url){
+        return getRequest(url, basicHeaders());
+    }
+
     public Response getRequest(String url, Map<String, String> headers) {
-
-
-
         logger.info("-------------------- Http Put Request --------------------");
         logger.info("URL: " + url);
         logger.info("Headers: " + headers);
@@ -27,7 +27,8 @@ public class ApiConnector {
 
         logger.info("-------------------- Http Post Response --------------------");
         logger.info("Status Code: " + response.statusCode());
-        logger.info("Body: " + response.getBody().prettyPrint());
+//        response.getBody().prettyPrint();
+        logger.info("Body: " + response.getBody().asString());
 
         return response;
     }

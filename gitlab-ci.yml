@@ -1,0 +1,12 @@
+#image: selenium/standalone-chrome
+image: maven:slim
+
+stages:
+  - test
+
+maven_build:
+  stage: test  
+  script:
+    - echo "------ Building Test Automation Project ------"
+    - mvn -T 8 clean install -DskipTests
+    - mvn -T 2 clean verify -Denvironment=staging
