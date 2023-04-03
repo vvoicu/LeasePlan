@@ -1,4 +1,4 @@
-package com.api;
+package starter.stepdefinitions;
 
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -27,9 +27,9 @@ public class ApiConnector {
 
         logger.info("-------------------- Http Post Response --------------------");
         logger.info("Status Code: " + response.statusCode());
-//        response.getBody().prettyPrint();
         logger.info("Body: " + response.getBody().asString());
 
+//        response.getBody().prettyPrint();
         return response;
     }
 

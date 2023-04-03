@@ -5,85 +5,85 @@ Feature: Search for the product
 ### Prepare Positive and negative scenarios
 
   ###Orange URL
-  Scenario:
-    When he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/orange"
+  Scenario: Orange Url verify Sisi
+    Given he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/orange"
     Then 200 Status Code
-    Then see the results displayed for "Sisi No Bubbles Orange 0% pet 1500 ml"
+    Then see the results displayed for "Sisi No Bubbles Orange"
 
-  Scenario:
+  Scenario: Orange Url verify apple
     When he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/orange"
     Then see the results displayed for "apple"
 
-  Scenario:
-    When he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/orange"
+  Scenario: Orange Url verify pasta
+    Given he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/orange"
     Then 200 Status Code
     Then see the results displayed for "pasta"
 
-  Scenario:
-    When he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/orange"
+  Scenario: Orange Url verify cola
+    Given he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/orange"
     Then 200 Status Code
     Then see the results displayed for "cola"
 
   ###apple URL
-  Scenario:
-    When he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/apple"
+  Scenario: Apple Url verify orange
+    Given he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/apple"
     Then 200 Status Code
     Then see the results displayed for "orange"
 
-  Scenario:
-    When he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/apple"
+  Scenario: Apple Url verify Organix
+    Given he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/apple"
     Then 200 Status Code
     Then see the results displayed for "Organix Apple rice cake clouds"
 
-  Scenario:
-    When he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/apple"
+  Scenario: Apple Url verify pasta
+    Given he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/apple"
     Then 200 Status Code
     Then see the results displayed for "pasta"
 
-  Scenario:
-    When he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/apple"
+  Scenario:  Apple Url verify cola
+    Given he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/apple"
     Then 200 Status Code
     Then see the results displayed for "cola"
 
   ###pasta URL
-  Scenario:
-    When he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/pasta"
+  Scenario: Pasta Url verify orange
+    Given he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/pasta"
     Then 200 Status Code
     Then see the results displayed for "orange"
 
-  Scenario:
-    When he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/pasta"
+  Scenario: Pasta Url verify AH Bio
+    Given he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/pasta"
     Then 200 Status Code
     Then see the results displayed for "AH Biologisch Tagliatelle  volkoren"
 
-  Scenario:
-    When he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/pasta"
+  Scenario: Pasta Url verify pasta
+    Given he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/pasta"
     Then 200 Status Code
     Then see the results displayed for "pasta"
 
-  Scenario:
-    When he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/pasta"
+  Scenario: Pasta Url verify cola
+    Given he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/pasta"
     Then 200 Status Code
     Then see the results displayed for "cola"
 
   ###cola URL
-  Scenario:
-    When he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/cola"
+  Scenario: Cola Url verify orange
+    Given he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/cola"
     Then 200 Status Code
     Then see the results displayed for "orange"
 
-  Scenario:
-    When he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/cola"
+  Scenario: Cola Url verify apple
+    Given he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/cola"
     Then 200 Status Code
     Then see the results displayed for "apple"
 
-  Scenario:
-    When he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/cola"
+  Scenario: Cola Url verify pasta
+    Given he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/cola"
     Then 200 Status Code
     Then see the results displayed for "pasta"
 
-  Scenario:
-    When he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/cola"
+  Scenario: Cola Url verify Pepsi
+    Given he calls url "https://waarkoop-server.herokuapp.com/api/v1/search/demo/cola"
     Then 200 Status Code
     Then see the results displayed for "Pepsi"
 

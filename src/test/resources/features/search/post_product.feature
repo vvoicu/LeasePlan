@@ -19,7 +19,7 @@ Feature: Search for the product
 
   Scenario:
     When he calls endpoint "https://waarkoop-server.herokuapp.com/api/v1/search/demo/apple"
-    Then he sees the results displayed for mango
+    Then he sees the results displayed for "mango"
 
   Scenario:
     When he calls endpoint "https://waarkoop-server.herokuapp.com/api/v1/search/demo/car"
